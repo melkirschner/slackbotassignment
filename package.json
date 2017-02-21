@@ -1,9 +1,9 @@
 {
-  "name": "Mel's bot",
+  "name": "melhubotapp",
   "version": "0.0.0",
   "private": true,
   "author": "Melanie Kirschner <mkirschner@marketo.com>",
-  "description": "Melanie's slack bot",
+  "description": "A simple helpful robot for your Company",
   "dependencies": {
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
