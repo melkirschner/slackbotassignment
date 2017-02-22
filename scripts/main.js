@@ -10,7 +10,8 @@ module.exports = function(robot) {
    switch (favoriteSeason) {
      case "spring":
        return msg.reply("Grab an umbrella for those spring showers");
-       
+       return msg.reply("https://images-na.ssl-images-amazon.com/images/I/71md9jHDSgL._UL1500_.jpg");
+
        break;
      case "summer":
        return msg.reply("Go to the beach");
