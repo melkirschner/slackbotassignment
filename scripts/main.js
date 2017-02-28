@@ -1,34 +1,12 @@
 module.exports = function(robot) {
   //  YOUR CODE HERE
-
-
-
- //  robot.hear(/what is your favorite season (.*)/, function(msg) {
- //   var favoriteSeason;
- //   favoriteSeason = msg.match[1];
- //   console.log(favoriteSeason);
- //   switch (favoriteSeason) {
- //     case "spring":
- //        msg.reply("Grab an umbrella for those spring showers");
- //        msg.send("https://images-na.ssl-images-amazon.com/images/I/71md9jHDSgL._UL1500_.jpg");
-
- //       break;
- //     case "summer":
- //       return msg.reply("Go to the beach");
- //       break;
- //     case "fall":
- //       return msg.reply("Wahoooo go stomp in some leaves");
- //       break;
- //     default:
- //       return msg.reply("I don't have a favorite " + fav + ". What's yours?");
- //   }
- // });
-
-
-
-
   
-
+dessert = [
+  "http://images.media-allrecipes.com/userphotos/250x250/708879.jpg",
+  "http://i.huffpost.com/gen/1927092/images/o-FROZEN-YOGURT-TOPPINGS-facebook.jpg",
+  "http://www.gannett-cdn.com/-mm-/f3407122d7859378db967aa6a346e70d19152800/c=0-118-1416-2006&r=537&c=0-0-534-712/local/-/media/2016/05/04/CNYGroup/Elmira/635979720581763022-icecream.jpg",
+  "http://www.guymondailyherald.com/sites/default/files/field/image/apple-pie.jpg"
+]
     robot.hear(/my favorite girlscout cookie is (.*)/, function(msg) {
    var favoriteCookie;
    favoriteCookie = msg.match[1];
@@ -51,7 +29,61 @@ module.exports = function(robot) {
         msg.send("Ehhhh those are okay- maybe this Caramel turtle recipe will make them better: You will need 3 milk chocolate bars, 12 caramels, 12 cookies, and 60 pecan halves. Preheat oven to 250°. Break each chocolate bar into fourths. Place each piece 2 in. apart on a parchment paper-lined baking sheet. Top with one caramel.Bake 5-7 minutes or until caramel just starts to soften. Immediately press one pecan half on one side for head; press four pecan halves onto each corner for legs. Place one Peanut Butter Patties®/Tagalongs® cookie over the top of each candy, pressing down to secure. Let stand until set");
        break;
      default:
-       return msg.reply("I don't have a favorite " + favoriteCookie + ". What's yours?");
+       return msg.reply(favoriteCookie + "is not a girlscout cookie that I know try again?");
    }
  });
+robot.hear(/i love dessert/, function(yummy) {
+       return yummy.send(yummy.random(dessert));
+   });
+
+robot.hear(/vocab(.*)/, function(meaning){
+var word;
+   word = meaning.match[1];
+   console.log(word);
+
+   switch (word) {
+     case "library":
+       return meaning.reply("Set of Predifined functions that your code calls");
+       break;
+     case "framework":
+       return meaning.reply("opinionated architecture for building software");
+       break;
+     case "node.js":
+       return meaning.reply("an open-source, cross platform runtime environment for developing server-side Web applications");
+       break;
+     case "git":
+       return meaning.reply("version control software and is a tool that primarily stores code and maintains each file's history");
+       break;
+     case "github":
+       return meaning.reply("a website and platform for utilizing Git in a collaborative way");
+       break;
+     case "local scope":
+       return meaning.reply("a variable declared within a function that is not accessible outside of that function");
+       break;
+     case "array":
+       return meaning.reply("collection of data that you can use efficiently");
+       break;
+     case "function":
+       return meaning.reply("a reusable statement, or a group of reusable statements that can be called anywhere in a program");
+       break;
+     case "object":
+       return meaning.reply("a data type defined by code enclosed in braces{}. can contain properties and methods");
+       break;
+     case "scope":
+       return meaning.reply("describes the set of variables you have access to");
+       break;
+     case "global scope":
+      return meaning.reply("a variable declared outside of a function that is accessible everywhere, even within functions");
+       break;
+    case "hoisting":
+      return meaning.reply("moving declarations to the top of a scope. You can use a function or variable before it has been declared.");
+       break;
+     case "closure":
+      return meaning.reply("an inner function that has access to the outer(enclosing) function's variables. Aka lexical scope");
+       break;
+     default:
+       return meaning.reply("I don't know what " + word + "means");
+   }
+});
 }
+
