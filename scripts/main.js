@@ -12,7 +12,7 @@ robot.hear(/i love dessert/, function(yummy) {
        return yummy.send(yummy.random(dessert));
    });
 
-//when you tell the bot what your favorite girlscout cookie is it will return an image of the cookie and a cool new recipe 
+//when you tell the bot what your favorite girlscout cookie is it will return an image of the cookie and a cool new recipe. 
 robot.hear(/my favorite girlscout cookie is (.*)/, function(msg) {
    var favoriteCookie;
    favoriteCookie = msg.match[1];
