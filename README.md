@@ -212,3 +212,11 @@ Add the subdomain hubot should connect to. If you web URL looks like
 
 You may want to get comfortable with `heroku logs` and `heroku restart` if
 you're having issues.
+
+
+
+What my bot can do: 
+
+1. type in the phrase "I love dessert" and it will return a random image of a dessert from the specified array
+2. type in the phrase "My favorite girl scout cookie is" and then the name of the girlscout cookie. ex: My favorite girl scout cookie is samoas. The bot will return an image of the cookie and a recipe to doctor up the cookie if you choose samoas, thin mints, do-si-dos, or tagalongs. If your value is not one of the 4 you get a response back saying the value is not a girl scout cookie.
+3. type "vocab" and a term we've learned in class. ex: vocab function and it will return the definition of the vocabulary word. There are 13 different words that will return the definition and if it is not one of the 13 words the bot will let you know that it doesnt know the word.
