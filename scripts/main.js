@@ -29,57 +29,57 @@ dessert = [
         msg.send("Ehhhh those are okay- maybe this Caramel turtle recipe will make them better: You will need 3 milk chocolate bars, 12 caramels, 12 cookies, and 60 pecan halves. Preheat oven to 250°. Break each chocolate bar into fourths. Place each piece 2 in. apart on a parchment paper-lined baking sheet. Top with one caramel.Bake 5-7 minutes or until caramel just starts to soften. Immediately press one pecan half on one side for head; press four pecan halves onto each corner for legs. Place one Peanut Butter Patties®/Tagalongs® cookie over the top of each candy, pressing down to secure. Let stand until set");
        break;
      default:
-       return msg.reply(favoriteCookie + "is not a girlscout cookie that I know try again?");
+       return msg.reply(favoriteCookie + " is not a girlscout cookie that I know try again?");
    }
  });
 robot.hear(/i love dessert/, function(yummy) {
        return yummy.send(yummy.random(dessert));
    });
 
-robot.hear(/vocab(.*)/, function(meaning){
+robot.hear(/vocab(.*)/, function(meaning) {
 var word;
    word = meaning.match[1];
    console.log(word);
 
    switch (word) {
      case "library":
-       return meaning.reply("Set of Predifined functions that your code calls");
+        meaning.reply("Set of Predifined functions that your code calls");
        break;
      case "framework":
-       return meaning.reply("opinionated architecture for building software");
+        meaning.reply("opinionated architecture for building software");
        break;
      case "node.js":
-       return meaning.reply("an open-source, cross platform runtime environment for developing server-side Web applications");
+       meaning.reply("an open-source, cross platform runtime environment for developing server-side Web applications");
        break;
      case "git":
-       return meaning.reply("version control software and is a tool that primarily stores code and maintains each file's history");
+       meaning.reply("version control software and is a tool that primarily stores code and maintains each file's history");
        break;
      case "github":
-       return meaning.reply("a website and platform for utilizing Git in a collaborative way");
+       meaning.reply("a website and platform for utilizing Git in a collaborative way");
        break;
      case "local scope":
-       return meaning.reply("a variable declared within a function that is not accessible outside of that function");
+        meaning.reply("a variable declared within a function that is not accessible outside of that function");
        break;
      case "array":
-       return meaning.reply("collection of data that you can use efficiently");
+       meaning.reply("collection of data that you can use efficiently");
        break;
      case "function":
-       return meaning.reply("a reusable statement, or a group of reusable statements that can be called anywhere in a program");
+        meaning.reply("a reusable statement, or a group of reusable statements that can be called anywhere in a program");
        break;
      case "object":
-       return meaning.reply("a data type defined by code enclosed in braces{}. can contain properties and methods");
+       meaning.reply("a data type defined by code enclosed in braces{}. can contain properties and methods");
        break;
      case "scope":
-       return meaning.reply("describes the set of variables you have access to");
+        meaning.reply("describes the set of variables you have access to");
        break;
      case "global scope":
-      return meaning.reply("a variable declared outside of a function that is accessible everywhere, even within functions");
+       meaning.reply("a variable declared outside of a function that is accessible everywhere, even within functions");
        break;
     case "hoisting":
-      return meaning.reply("moving declarations to the top of a scope. You can use a function or variable before it has been declared.");
+       meaning.reply("moving declarations to the top of a scope. You can use a function or variable before it has been declared.");
        break;
      case "closure":
-      return meaning.reply("an inner function that has access to the outer(enclosing) function's variables. Aka lexical scope");
+      meaning.reply("an inner function that has access to the outer(enclosing) function's variables. Aka lexical scope");
        break;
      default:
        return meaning.reply("I don't know what " + word + "means");
