@@ -36,7 +36,7 @@ robot.hear(/i love dessert/, function(yummy) {
        return yummy.send(yummy.random(dessert));
    });
 
-robot.hear(/vocab(.*)/, function(meaning) {
+robot.hear(/vocab (.*)/, function(meaning) {
 var word;
    word = meaning.match[1];
    console.log(word);
